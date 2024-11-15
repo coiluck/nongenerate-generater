@@ -47,7 +47,7 @@
   z-index: -1;
 }
 
-body,a,p,h3 {
+body,a,p,h2 {
   margin: 0;
   padding: 0;
   font-family: 'mamelon3.5', sans-serif;
@@ -93,6 +93,7 @@ body {
     height: 60px;
     margin: auto;
     font-size: 18px;
+    font-family: 'mamelon3.5', sans-serif;
     color: white;
     background-color: #928484;
     border-radius: 10px;
@@ -130,8 +131,8 @@ body {
 }
 #i3 {
     position: absolute;
-    top: 80%;
-    left: 90%;
+    top: 75%;
+    right: 10%;
 }
 #m1 {
   position: absolute;
