@@ -1,10 +1,13 @@
 // タイトル保存、モーダル非表示
-function saveTitle() {
-  const userInput = document.getElementById('userInput').value;
-  const title = userInput;
-  document.getElementById('title').querySelector('p').innerText = title + "ジェネレータ";
-  document.getElementById('modal').style.display = 'none';
-  setAdvice()
+function changeModal(isGenerate = false) {
+  const userInput = document.getElementById('userInput').value.trim()
+  document.getElementById('title').querySelector('p').innerText = userInput + "ジェネレータ";
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.classList.toggle('showOutput');
+  });
+  if (isGenerate) {
+    setAdvice()
+  }
 }
 
 const textArray = [
@@ -22,6 +25,9 @@ const textArray = [
 function setAdvice() {
   const randomIndex = Math.floor(Math.random() * textArray.length);
   const randomText = textArray[randomIndex];
-  const textContainer = document.getElementById("p-advice");
-  textContainer.textContent = randomText;
+  document.getElementById("advice-text").textContent = randomText;
+  document.getElementById("advice-text").classList.add("active");
+  setTimeout(() => {
+    document.getElementById("advice-text").classList.remove("active");
+  }, 300);
 }

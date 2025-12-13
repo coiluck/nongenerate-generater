@@ -5,36 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>絶対に決める</title>
   <link rel="stylesheet" href="main.css">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./assets/images/favicon.ico">
 </head>
 <body>
-    
-  <div class="modal" id="modal">
+
+  <div class="modal" id="modal-input">
     <h2>決めたいこと</h2>
     <div class="input-container">
       <input type="text" id="userInput" placeholder="テキストを入力">
       <span class="label-generator">ジェネレータ</span>
     </div>
-    <button onclick="saveTitle()">OK</button>
-    <div id="m1" class="image"><img src="cloud-fcecea.png"></div>
-    <div id="m2" class="image"><img src="cloud-fcecea.png"></div>
+    <button class="ok-button" onclick="changeModal(true)">OK</button>
+    <div id="m1" class="image"><img src="./assets/images/cloud-fcecea.png"></div>
+    <div id="m2" class="image"><img src="./assets/images/cloud-fcecea.png"></div>
   </div>
 
-  <div class="top-bar">
-    <p class="top-bar-text">
-      <a href="https://coiluck.github.io/" class="custom-link">革命学舎</a>
-    </p>
+  <div class="modal" id="modal-output">
+    <div class="top-bar"  onclick="changeModal(false)">
+      <div class="top-bar-icon">◀</div>
+      <p class="top-bar-text">もどる</p>
+    </div>
+    <div id="title">
+      <p>置き換わるはず1</p>
+    </div>
+    <div class="advice-container">
+      <p id="advice-text">置き換わるはず2</p>
+    </div>
+    <button class="generate-button" onclick="setAdvice()">Generate!</button>
   </div>
-   
-  <div class="container">
-    <div id="title"><p>置き換わるはず1</p></div>
-    <div id="advice"><p id="p-advice">置き換わるはず2</p></div>
-    <button id="generate-button" onclick="setAdvice()">Generate!</button>
-  </div>
-  
-  <div id="i1" class="image"><img src="cloud-ee817b.png"></div>
-  <div id="i2" class="image"><img src="cloud-ee817b.png"></div>
-  <div id="i3" class="image"><img src="cloud-ee817b.png"></div>
+
+  <div id="i1" class="image"><img src="./assets/images/cloud-ee817b.png"></div>
+  <div id="i2" class="image"><img src="./assets/images/cloud-ee817b.png"></div>
+  <div id="i3" class="image"><img src="./assets/images/cloud-ee817b.png"></div>
 
   <script src="main.js"></script>
 </body>
