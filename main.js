@@ -20,11 +20,20 @@ const textArray = [
   "正解なんてないのかも",
   "今すぐじゃなくてもいいかもよ？",
   "選ぶのは君の自由だよ〜",
+  "いったん寝てから考えない？",
+  "どれを選んでも、それが運命だよ",
+  "目をつぶってエイッ！で選ぼう"
 ];
 
 function setAdvice() {
-  const randomIndex = Math.floor(Math.random() * textArray.length);
-  const randomText = textArray[randomIndex];
+  // 抽選
+  let randomIndex;
+  let randomText;
+  do {
+    randomIndex = Math.floor(Math.random() * textArray.length);
+    randomText = textArray[randomIndex];
+  } while (randomText === document.getElementById("advice-text").textContent);
+  // DOM更新
   document.getElementById("advice-text").textContent = randomText;
   document.getElementById("advice-text").classList.add("active");
   setTimeout(() => {
