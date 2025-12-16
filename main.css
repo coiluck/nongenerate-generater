@@ -81,6 +81,7 @@ button:hover {
 }
 input[type="text"] {
   flex: 1;
+  min-width: 0;
   border: none;
   background-color: #ee817b;
   color: #fcecea;
@@ -88,6 +89,7 @@ input[type="text"] {
   box-sizing: border-box;
 }
 .label-generator {
+  flex-shrink: 0;
   color: #fcecea;
 }
 .ok-button {
